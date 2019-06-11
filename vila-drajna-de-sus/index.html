@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Vila de vacanta in judetul Prahova">
+    <meta name="author" content="">
+
+    <title>Vila Drajna de Sus</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet" type="text/css">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+function initialize() {
+  var mapOptions = {
+    zoom: 14,
+    center: new google.maps.LatLng(45.286539,26.039008),
+    disableDefaultUI: true,
+    zoomControl: true,
+    scaleControl: false,
+    scrollwheel: false,
+    disableDoubleClickZoom: true,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+
+  }
+  var map = new google.maps.Map(document.getElementById('harta'), mapOptions);
+
+  var image = 'img/casa.png';
+  // var myLatLng = new google.maps.LatLng(-33.890542, 151.274856);
+  var myLatLng = new google.maps.LatLng(45.286449,26.039018);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+  });
+  // var contentString = '<div class="mapBubble">'+'<p><b>Locatie vila</b> </p> '+'<p>45.286539,26.039008</p>'+'</div>';
+
+  // var infowindow = new google.maps.InfoWindow({
+  //     content: contentString
+  // });
+  // google.maps.event.addListener(beachMarker, 'click', function() {
+  //   infowindow.open(map,beachMarker);
+  // });
+}
+
+// google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+<style type="text/css">
+  .carousel-caption{display: none;}
+  body {
+  font-family: 'Oswald', sans-serif;
+}
+.intro .intro-body{
+  background: url('img/exterior/1.jpg') no-repeat center;
+  background-size: cover;
+}
+.avantajeBtn{
+  color: red !important;
+  border-color: red !important;
+  font-family: Arial !important;
+}
+#avantaje{
+  color: #000;
+}
+#avantaje .modal-dialog{
+  width: 90%;
+}
+.telefon{
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #FFF;
+  color: #000;
+  padding: 10px 15px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.intro .intro-body .brand-heading,
+.intro .intro-body .intro-text{
+  color: #FFF;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 18px;
+}
+.btn-circle{
+  color: #FFF;
+  border-color: #FFF;
+  box-shadow: 1px 1px 1px #000;
+}
+.btn-circle i{
+  color: #FFF;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+  max-height: 420px;
+  margin: 0 auto;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78908243-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    Vila Prahova
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#descriere">Descriere</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#exterior">Exterior</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#interior">Interior</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#harta">Harta</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="page-scroll avantajeBtn" data-toggle="modal" data-target="#avantaje">Avantaje</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+            <!-- <iframe id="bluetube-player-1" frameborder="0" allowfullscreen="1" title="YouTube video player" width="100%" src="https://www.youtube.com/embed/mL_XX8Cj4Uk?showinfo=0&amp;rel=0&amp;controls=0&amp;modestbranding=0&amp;wmode=transparent&amp;iv_load_policy=3&amp;enablejsapi=1&amp;autoplay=1&amp;vq=hd720" ></iframe> -->
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="intro-text">O casa de vacanta a fost intotdeauna un vis al nostru, al oamenilor care traiesc si muncesc in orasele aglomerate, pline de noxe, traind intr-un stres continuu.</p>
+
+                        <p class="intro-text">Acum acest vis trebuie sa devina realitate, avem nevoie de odihna , de relaxare, de aer plin de ozon in mijlocul naturii, de un loc al nostru unde sa ne refugiem atunci cand suntem obositi, in concediu si de ce nu – intr-un final – atunci cand ne pensionam  si viata noastra devine mai buna, mai frumoasa.</p>
+
+                        <p class="intro-text">In Drajna de Sus (jud. Prahova) , intr-un loc parca uitat de vreme, inconjurata de paduri de brazi si foioase, exista aceasta vila superba, cu o arhitectura care te duce cu gandul la vechile castele medievale ale cavalerilor din acele vremuri dar care, in acelasi timp, iti pune la dispozitie toate facilitatile, utilitatile si finisajele unei case moderne.</p>
+
+                        <h1 class="brand-heading">Aici te poti relaxa asa cum meriti!</h1>
+                        <a href="#descriere" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="descriere" class="container content-section">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Descriere</h2>
+                <p>Constructie : an 2014<br />
+                Casa are o curte de 1000 mp , imprejmuita cu gard cu deschidere la soseaua asfaltata. <br />
+                Constructia are 120 mp, parter + etaj. <br />
+                La parter : living, terasa, baie, bucatarie<br />
+                La etaj : 3 dormitoare, terasa, baie, hol
+                </p>
+                <h4>Utilitati:</h4>
+                <ul>
+                   <li>Incalzire centrala cu centrala termica (termosemineu) alimentata cu lemn, cu calorifere in fiecare camera</li>
+                   <li>Canalizare</li>
+                   <li>Alimentare cu apa de la retea cat si de la put propriu; boiler pentru apa calda</li>
+                   <li>Instalatie electrica 220V</li>
+                   <li>Internet,  catv si telefon</li>
+                </ul>
+                <br />
+                <h4>Finisaje:</h4>
+
+                <ul>
+                    <li>Acoperis Lindab</li>
+                    <li>Ferestre termopan</li>
+                    <li>Grilaje la ferestre si terase</li>
+                    <li>Termoizolatie exterioara cu poliestiren</li>
+                    <li>Usa metalica la intrare antiefractie</li>
+                    <li>Parchet, gresie, faianta</li>
+                    <li>Scara interioara lucrata manual</li>
+                    <li>Tavan mahon cu aplicatii executate manual</li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- exterior Section -->
+    <section id="exterior" class="content-section text-center">
+        <div class="download-section1">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators hide">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="10"></li>
+                      </ol>
+                    
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img src="img/exterior/1.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 1
+                          </div>
+                        </div>
+
+                        <!-- <div class="item hide">
+                          <img src="img/exterior/2.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 2
+                          </div>
+                        </div> -->
+
+                        <!-- <div class="item">
+                          <img src="img/exterior/3.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 3
+                          </div>
+                        </div> -->
+
+                        <!-- <div class="item hide">
+                          <img src="img/exterior/4.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 4
+                          </div>
+                        </div> -->
+
+                        <!-- <div class="item">
+                          <img src="img/exterior/5.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 5
+                          </div>
+                        </div> -->
+
+                        <!-- <div class="item">
+                          <img src="img/exterior/6.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 6
+                          </div>
+                        </div> -->
+
+                        <div class="item">
+                          <img src="img/exterior/7.png" />
+                          <div class="carousel-caption">
+                            Descriere poza 7
+                          </div>
+                        </div>
+                        
+                        <!-- <div class="item">
+                          <img src="img/exterior/8.png" />
+                          <div class="carousel-caption">
+                            Descriere poza 8
+                          </div>
+                        </div> -->
+
+                        <div class="item">
+                          <img src="img/exterior/9.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 9
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <img src="img/exterior/10.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 10
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <img src="img/exterior/11.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 11
+                          </div>
+                        </div>
+                        
+
+                      </div>
+                    
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- interior Section -->
+    <section id="interior" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic1" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic1" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic1" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic1" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-generic1" data-slide-to="5"></li>
+                        <li data-target="#carousel-example-generic1" data-slide-to="6"></li>
+                        <li data-target="#carousel-example-generic1" data-slide-to="7"></li>
+                        <li data-target="#carousel-example-generic1" data-slide-to="8"></li>
+                      </ol>
+                    
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img src="img/interior/1.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 1
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <img src="img/interior/2.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 2
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <img src="img/interior/3.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 3
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <img src="img/interior/4.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 4
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <img src="img/interior/5.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 5
+                          </div>
+                        </div>
+                        
+                        <div class="item">
+                          <img src="img/interior/6.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 6
+                          </div>
+                        </div>
+                        
+                        <div class="item">
+                          <img src="img/interior/7.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 7
+                          </div>
+                        </div>
+                        
+                        <div class="item">
+                          <img src="img/interior/8.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 8
+                          </div>
+                        </div>
+                        
+                        <div class="item">
+                          <img src="img/interior/9.jpg" />
+                          <div class="carousel-caption">
+                            Descriere poza 9
+                          </div>
+                        </div>
+                        
+
+
+                      </div>
+                    
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="harta">
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1403.5427756891306!2d26.037350790360087!3d45.286492925827005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d45.2864023!2d26.0380964!5e0!3m2!1sen!2sro!4v1542101244460" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border:0" allowfullscreen></iframe> -->
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=26.01335048675537%2C45.27784593962133%2C26.06291770935059%2C45.2958714119936&amp;layer=mapnik&amp;marker=45.28685939180159%2C26.03813409805298" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=45.2869&amp;mlon=26.0381#map=16/45.2869/26.0381">Vezi harta marita</a></small>
+    </div>
+
+    <!-- Footer -->
+<!--     <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; vilaph.tk 2015</p>
+        </div>
+    </footer> -->
+    <!-- <img src="img/telefon.png" id="telefon" /> -->
+
+    <div class="modal fade" id="avantaje" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header hide">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Pre-existing Conditions</h4>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Accesul facil pe DN 1A (Ploiesti-Valeni-Drajna de sus), drum care este foarte bun si nu asa de aglomerat ca DN 1</li>
+                    <li>Costul de incalzire scazut pentru centrala alimentata cu lemn de 200 lei pentru 30 de zile de iarna fata de 7-800 lei pentru centrala alimentata cu gaz; consumul redus de combustibil fiind favorizat de dubla izolatie termica (exterior si interior) a peretilor</li>
+                    <li>Liniste, aer curat si racoare vara (padure de brad in vecinatate) in comparatie cu climatul citadin</li>
+                    <li>Lipsa vecinilor galagiosi</li>
+                    <li>Accesul rapid la zonele turistice invecinate ( Valea Prahovei, Slanic Prahova , Cheia)</li>
+                    <li>Posibilitatea achizitionarii de produse bio</li>
+                    <li>Raport calitate / pret imbatabil</li>
+                    <li>Veti putea locui / merge in vacanta intr-o zona aleasa cu grija in care veti beneficia de confortul unei locuinte moderne si a unui climat extraordinar </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <span class="telefon">
+    Tel: 0769.734.755
+  </span>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/jquery.jrumble.1.3.min.js"></script>
+    <script src="js/grayscale.js"></script>
+    <script type="text/javascript">
+    $('.carousel').carousel({
+        interval: false
+      });
+    $(document).ready(function(){
+      screenWidth = $(window).width();
+      screenHeight = $(window).height();
+      $(".intro iframe").height(screenWidth*9/16);
+
+      $('.avantajeBtn').jrumble({
+        x: 2,
+        y: 2,
+        rotation: 1
+      });
+      $('.avantajeBtn').trigger('startRumble');
+    });
+    </script>
+</body>
+
+</html>
+
