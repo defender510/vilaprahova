@@ -31,4 +31,6 @@ $(document).ready(function($) {
         var currentTime = new Date();
         var year = currentTime.getFullYear();
         $('.year').text(year);
+
+        $('#contact iframe').attr('src', $('#contact iframe').attr('src'));
 });
