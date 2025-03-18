@@ -1,6 +1,0 @@
-jQuery plugin to view a 360 degree panorama
-Special thanks to:
- - Evgeny Likov (http://likov.spb.ru): fixed drag and kinetic scroll
- - chrigu-ebert (http://github.com/chrigu-ebert): small fixes and callback option
- - cotko (http://github.com/cotko): added is360 option
- 
