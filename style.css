@@ -110,9 +110,16 @@ body {
     justify-content: center; /* Tranziție la schimbarea culorii */
     margin: 2px;
     border: 4px solid midnightblue;
-    height: 20px;
-    width: 740px;
-    margin-left: 320px;
+      height: 20px;
+      width: 740px;
+      margin-left: 320px;
+  }
+  
+  @media (max-width: 480px) {
+      .button-link {
+          width: 100%; /* Adjust width for smaller screens */
+          margin-left: 0; /* Center align for smaller screens */
+      }
   }
 
   .color-button {
