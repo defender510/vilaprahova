@@ -73,7 +73,7 @@ body {
   
   @media (max-width: 480px) {
     .logo {
-      width: 100px;
+      width: 50px;
     }
   
     h1 {
@@ -118,7 +118,7 @@ body {
   @media (max-width: 480px) {
       .button-link {
           width: 100%; /* Adjust width for smaller screens */
-          margin-left: 0; /* Center align for smaller screens */
+          margin-left: auto; /* Center align for smaller screens */
       }
   }
 
