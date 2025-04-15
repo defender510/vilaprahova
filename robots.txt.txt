@@ -1,0 +1,6 @@
+# Robots.txt pentru vilaprahova.ro
+
+User-agent: *  
+
+
+Sitemap: https://www.vilaprahova.ro/sitemap.xml  # Indică locația sitemap-ului
