@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 480px) {
     body {
-        background-color: #ffeb3b; /* Fundal diferit pentru telefoane mici */
+        background-color: #F5F5DC; /* Fundal diferit pentru telefoane mici */
     }
     .resize-button {
         font-size: 10px; /* Micșorează fontul pe telefoane mici */
