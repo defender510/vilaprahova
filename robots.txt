@@ -3,5 +3,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.vilaprahova.ro/sitemap.xml
+Sitemap: https://vilaprahova.ro/sitemap.xml
+
 
