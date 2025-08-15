@@ -1,8 +1,6 @@
-# Robots.txt pentru vilaprahova.ro
-
 User-agent: *
+Disallow: /admin/
+Disallow: /private/
 Allow: /
 
 Sitemap: https://vilaprahova.ro/sitemap.xml
-
-

@@ -2,217 +2,92 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <title>Carusel cu efect de cărămidă + ramă verde + controale (object-fit: contain)</title>
-  <meta name="description" content="Vezi galeria foto cu casele de vânzare în Prahova. Poze reale cu proiectele construite, disponibile imediat.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagini case și vile de vânzare în Prahova</title>
+  <meta name="description" content="Vânzăm case și vile de vacanță în județul Prahova. Descoperă galeria foto cu exterior și interior pentru fiecare casă construită cu grijă. Telefon: 0769.734.755" />
   <link rel="canonical" href="https://vilaprahova.ro/imagini.html">
+
+  <!-- JSON-LD Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    "name": "Vile și case de vânzare în Prahova",
+    "url": "https://vilaprahova.ro/imagini.html",
+    "image": [
+      "https://vilaprahova.ro/pictures/1.jpeg",
+      "https://vilaprahova.ro/pictures/2.jpeg",
+      "https://vilaprahova.ro/pictures/3.1.jpeg"
+    ],
+    "description": "Vânzăm case și vile de vacanță în județul Prahova, construite cu grijă și stil.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Str. Ioan Slavici, nr.9, Predeal Sarari",
+      "addressLocality": "Valenii de Munte",
+      "addressRegion": "Prahova",
+      "postalCode": "106100",
+      "addressCountry": "RO"
+    },
+    "telephone": "+40769734755",
+    "priceRange": "€75000"
+  }
+  </script>
+
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #eee;
-      font-family: sans-serif;
-    }
-
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      height: 600px;
-      overflow: hidden;
-      margin: 40px auto;
-      border: 8px solid #2ecc71; /* ramă verde */
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      background: #fff;
-      user-select: none;
-    }
-
-    .carousel-image {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;  /* aici e schimbarea */
-      background-color: #000; /* fundal negru pentru spațiile libere */
-      z-index: 0;
-      transition: opacity 0.5s ease;
-    }
-
-    .brick-grid {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: grid;
-      grid-template-columns: repeat(20, 1fr);
-      grid-template-rows: repeat(12, 1fr);
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .brick {
-      background-color: #c1440e;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='10'><rect width='20' height='10' fill='%23c1440e'/><path d='M0 0h20v10H0V0zm10 0v10M0 5h20' stroke='%236b2e15' stroke-width='0.5'/></svg>");
-      background-size: cover;
-      box-shadow: inset 0 0 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
-      animation: reveal 0.5s ease forwards;
-      animation-fill-mode: forwards;
-    }
-
-    @keyframes reveal {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-
-    /* Butoane stânga/dreapta */
-    .btn-control {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(46, 204, 113, 0.7);
-      border: none;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-      transition: background 0.3s ease;
-      user-select: none;
-    }
-    .btn-control:hover {
-      background: rgba(46, 204, 113, 1);
-    }
-    .btn-left {
-      left: 10px;
-    }
-    .btn-right {
-      right: 10px;
-    }
-    /* Săgeți */
-    .btn-control::before {
-      content: '';
-      display: inline-block;
-      border-style: solid;
-      border-width: 10px 7px 10px 7px;
-      border-color: transparent;
-    }
-    .btn-left::before {
-      border-right-color: white;
-      margin-left: 2px;
-    }
-    .btn-right::before {
-      border-left-color: white;
-      margin-right: 2px;
-    }
+    body { margin:0; padding:0; background:#eee; font-family:sans-serif; }
+    .carousel-container { position:relative; width:100%; max-width:1000px; height:600px; overflow:hidden; margin:40px auto; border:8px solid #2ecc71; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.3); background:#fff; user-select:none; }
+    .carousel-image { position:absolute; width:100%; height:100%; object-fit:contain; background-color:#000; z-index:0; transition:opacity 0.5s ease; }
+    .brick-grid { position:absolute; width:100%; height:100%; display:grid; grid-template-columns:repeat(20,1fr); grid-template-rows:repeat(12,1fr); pointer-events:none; z-index:1; }
+    .brick { background-color:#c1440e; background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='10'><rect width='20' height='10' fill='%23c1440e'/><path d='M0 0h20v10H0V0zm10 0v10M0 5h20' stroke='%236b2e15' stroke-width='0.5'/></svg>"); background-size:cover; box-shadow: inset 0 0 3px rgba(0,0,0,0.3),0 1px 2px rgba(0,0,0,0.2); animation:reveal 0.5s ease forwards; animation-fill-mode:forwards; }
+    @keyframes reveal { to { opacity:0; visibility:hidden; } }
+    .btn-control { position:absolute; top:50%; transform:translateY(-50%); background:rgba(46,204,113,0.7); border:none; border-radius:50%; width:48px; height:48px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:10; transition:background 0.3s ease; user-select:none; }
+    .btn-control:hover { background:rgba(46,204,113,1); }
+    .btn-left { left:10px; } .btn-right { right:10px; }
+    .btn-control::before { content:''; display:inline-block; border-style:solid; border-width:10px 7px 10px 7px; border-color:transparent; }
+    .btn-left::before { border-right-color:white; margin-left:2px; }
+    .btn-right::before { border-left-color:white; margin-right:2px; }
   </style>
 </head>
 <body>
 
 <div class="carousel-container">
-  <img id="carouselImg" class="carousel-image" alt="carusel" />
+  <img id="carouselImg" class="carousel-image" alt="Galerie foto case și vile" />
   <div class="brick-grid" id="brickGrid"></div>
 
-  <!-- Butoane control -->
   <button class="btn-control btn-left" aria-label="Imagine anterioară"></button>
   <button class="btn-control btn-right" aria-label="Imagine următoare"></button>
 </div>
 
 <script>
   const images = [
-    './pictures/1.jpeg',
-    './pictures/2.jpeg',
-    './pictures/3.1.jpeg',
-    './pictures/3.2.jpg',
-    './pictures/3.3.jpg',
-    './pictures/3.4.jpg',
-    './pictures/3.jpeg',
-    './pictures/4.1.jpeg',
-    './pictures/4.2.jpeg',
-    './pictures/4.3.jpeg',
-    './pictures/4.4.jpeg',
-    './pictures/4.5.jpg',
-    './pictures/4.jpg',
-    './pictures/5.1.jpg',
-    './pictures/5.jpg',
-    './pictures/6.1.jpg',
-    './pictures/6.jpg',
-    './pictures/7.1.jpeg',
-    './pictures/7.2.jpeg',
-    './pictures/7.3.jpg',
-    './pictures/7.4.jpg',
-    './pictures/7.6.jpg',
-    './pictures/7.jpg',
-    './pictures/8.1.jpg',
-    './pictures/8.2.jpeg',
-    './pictures/8.jpg'
+    './pictures/1.jpeg','./pictures/2.jpeg','./pictures/3.1.jpeg','./pictures/3.2.jpg','./pictures/3.3.jpg','./pictures/3.4.jpg','./pictures/3.jpeg','./pictures/4.1.jpeg','./pictures/4.2.jpeg','./pictures/4.3.jpeg','./pictures/4.4.jpeg','./pictures/4.5.jpg','./pictures/4.jpg','./pictures/5.1.jpg','./pictures/5.jpg','./pictures/6.1.jpg','./pictures/6.jpg','./pictures/7.1.jpeg','./pictures/7.2.jpeg','./pictures/7.3.jpg','./pictures/7.4.jpg','./pictures/7.6.jpg','./pictures/7.jpg','./pictures/8.1.jpg','./pictures/8.2.jpeg','./pictures/8.jpg'
   ];
-
-  const rows = 12;
-  const cols = 20;
-
+  const rows = 12, cols = 20;
   const carouselImg = document.getElementById('carouselImg');
   const brickGrid = document.getElementById('brickGrid');
   const btnLeft = document.querySelector('.btn-left');
   const btnRight = document.querySelector('.btn-right');
-
-  let currentIndex = 0;
-  let intervalId = null;
+  let currentIndex = 0, intervalId = null;
 
   function createBricks() {
     brickGrid.innerHTML = '';
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const brick = document.createElement('div');
-        brick.className = 'brick';
-        brick.style.animationDelay = `${(r + c) * 20}ms`;
-        brickGrid.appendChild(brick);
-      }
-    }
+    for(let r=0;r<rows;r++){for(let c=0;c<cols;c++){const brick=document.createElement('div');brick.className='brick';brick.style.animationDelay=`${(r+c)*20}ms`;brickGrid.appendChild(brick);}}
   }
 
-  function showImage(index) {
-    carouselImg.style.opacity = 0;
-    setTimeout(() => {
-      carouselImg.src = images[index];
-      carouselImg.style.opacity = 1;
-      createBricks();
-    }, 300);
+  function showImage(index){
+    carouselImg.style.opacity=0;
+    setTimeout(()=>{carouselImg.src=images[index];carouselImg.style.opacity=1;createBricks();},300);
   }
 
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  }
+  function nextImage(){ currentIndex=(currentIndex+1)%images.length; showImage(currentIndex); }
+  function prevImage(){ currentIndex=(currentIndex-1+images.length)%images.length; showImage(currentIndex); }
 
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-  }
+  btnLeft.addEventListener('click',()=>{prevImage(); resetInterval();});
+  btnRight.addEventListener('click',()=>{nextImage(); resetInterval();});
 
-  btnLeft.addEventListener('click', () => {
-    prevImage();
-    resetInterval();
-  });
-
-  btnRight.addEventListener('click', () => {
-    nextImage();
-    resetInterval();
-  });
-
-  function resetInterval() {
-    if (intervalId) clearInterval(intervalId);
-    intervalId = setInterval(nextImage, 4000);
-  }
-
-  showImage(currentIndex);
-  intervalId = setInterval(nextImage, 4000);
+  function resetInterval(){ if(intervalId) clearInterval(intervalId); intervalId=setInterval(nextImage,4000);}
+  showImage(currentIndex); intervalId=setInterval(nextImage,4000);
 </script>
 
 </body>
 </html>
-
-
-
